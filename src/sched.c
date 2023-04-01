@@ -60,6 +60,7 @@ struct pcb_t * get_mlq_proc(void) {
 		proc = dequeue(&mlq_ready_queue[MAX_PRIO]);
 	}	else{
 		proc = dequeue(&mlq_ready_queue[--curr_prio]);
+		// loz
 	}
 
 	pthread_mutex_unlock(&queue_lock);
